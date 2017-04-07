@@ -1,0 +1,56 @@
+<?xml version ="1.0" encoding = "UTF-8"?>
+<WayBillInfo>
+	<portNo></portNo>
+	<customerTranNo>SP1405240468</customerTranNo>
+	<customerOrderNo>80416992</customerOrderNo>
+	<deliveryName>崔彦平</deliveryName>
+	<deliveryCompany></deliveryCompany>
+	<deliveryPhone>81889610</deliveryPhone>
+	<deliveryTel>18680373326</deliveryTel>
+	<deliveryProvince>广东省</deliveryProvince>
+	<deliveryCity>深圳市</deliveryCity>
+	<deliveryArea></deliveryArea>
+	<deliveryAddress>广东省深圳市南山区西丽镇百旺信工业园迈瑞制造中心11-5</deliveryAddress>
+	<receiverName>马慧丽</receiverName>
+	<receiverComapny>天津市荧根商贸有限公司</receiverComapny>
+	<receiverPhone></receiverPhone>
+	<receiverTel>/022-58291029</receiverTel>
+	<receiverProvince>天津市</receiverProvince>
+	<receiverCity>天津市</receiverCity>
+	<receiverArea></receiverArea>
+	<receiverAddress>天津市河东区大直沽中路伯苓大厦B座903室</receiverAddress>
+	<goodsName>2针 成人重复使用腔内体温探头,大成人血压袖套物料包,9261上墙支架(中文)</goodsName>
+	<oldNumber>4.0000</oldNumber>
+	<actualWeight>0.0000</actualWeight>
+	<volume>0.0000</volume>
+	<oldPackType></oldPackType>
+	<transportType>普通陆运</transportType>
+	<serviceType></serviceType>
+	<payWay></payWay>
+	<payMoneyDate></payMoneyDate>
+	<cashAmount></cashAmount>
+	<cashReceiver></cashReceiver>
+	<cashPayer></cashPayer>
+	<isCollection></isCollection>
+	<collectionMoney></collectionMoney>
+	<collectionServerType></collectionServerType>
+	<limitationDay></limitationDay>
+	<limitationHour></limitationHour>
+	<sendMoney></sendMoney>
+	<isWaitNotice></isWaitNotice>
+	<signatures>
+		<signature></signature>
+		<signature></signature>
+	</signatures>
+	<stamps>
+		<stamp></stamp>
+		<stamp></stamp>
+	</stamps>
+	<specimens>
+		<specimen></specimen>
+		<specimen></specimen>
+	</specimens>
+	<returnRequirement></returnRequirement>
+	<isSentStr></isSentStr>
+	<remark></remark>
+</WayBillInfo>

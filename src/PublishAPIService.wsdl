@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDNInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDNInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDNInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTrackingService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTrackingServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTrackingServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCityForCRM">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCityForCRMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCityForCRMResult" type="tns:ArrayOfCITY_CRM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCITY_CRM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CITY_CRM" nillable="true" type="tns:CITY_CRM" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CITY_CRM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CITY_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY_CODE2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetShipment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paraXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShipmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShipmentResult" type="tns:ListEnShipment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListEnShipment">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EnResultBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfEnShipment" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EnResultBase">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="isOk" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEnShipment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EnShipment" nillable="true" type="tns:EnShipment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnShipment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipmentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PODNUM" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PickUpDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArriveDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transport" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenderRemark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalQuanlity" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalWeight" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalVolume" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcLocationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcTel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SrcPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestLocationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestTel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendTrackings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paraXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTrackingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTrackingsResult" type="tns:EnResultBase" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBillInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paraXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBillInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendBillInfoResult" type="tns:EnResultBase" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOtherCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paraXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOtherChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendOtherChargeResult" type="tns:EnResultBase" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDNInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDNInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDNInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDNInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTrackingServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTrackingService" />
+  </wsdl:message>
+  <wsdl:message name="GetTrackingServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTrackingServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCityForCRMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCityForCRM" />
+  </wsdl:message>
+  <wsdl:message name="GetCityForCRMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCityForCRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShipmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShipment" />
+  </wsdl:message>
+  <wsdl:message name="GetShipmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTrackingsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTrackings" />
+  </wsdl:message>
+  <wsdl:message name="SendTrackingsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTrackingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBillInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBillInfo" />
+  </wsdl:message>
+  <wsdl:message name="SendBillInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBillInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendOtherChargeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendOtherCharge" />
+  </wsdl:message>
+  <wsdl:message name="SendOtherChargeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendOtherChargeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PublishAPIServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDNInfo">
+      <wsdl:input message="tns:GetDNInfoSoapIn" />
+      <wsdl:output message="tns:GetDNInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrackingService">
+      <wsdl:input message="tns:GetTrackingServiceSoapIn" />
+      <wsdl:output message="tns:GetTrackingServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityForCRM">
+      <wsdl:input message="tns:GetCityForCRMSoapIn" />
+      <wsdl:output message="tns:GetCityForCRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发运单接口(参数采用xml格式,并且使用param为根节点)</wsdl:documentation>
+      <wsdl:input message="tns:GetShipmentSoapIn" />
+      <wsdl:output message="tns:GetShipmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">跟踪信息同步接口(参数采用xml格式,并且使用param为根节点)</wsdl:documentation>
+      <wsdl:input message="tns:SendTrackingsSoapIn" />
+      <wsdl:output message="tns:SendTrackingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBillInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">基础运费接口(参数采用xml格式,并且使用param为根节点)</wsdl:documentation>
+      <wsdl:input message="tns:SendBillInfoSoapIn" />
+      <wsdl:output message="tns:SendBillInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOtherCharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">附加费接口(参数采用xml格式,并且使用param为根节点)</wsdl:documentation>
+      <wsdl:input message="tns:SendOtherChargeSoapIn" />
+      <wsdl:output message="tns:SendOtherChargeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PublishAPIServiceSoap" type="tns:PublishAPIServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDNInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDNInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrackingService">
+      <soap:operation soapAction="http://tempuri.org/GetTrackingService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityForCRM">
+      <soap:operation soapAction="http://tempuri.org/GetCityForCRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipment">
+      <soap:operation soapAction="http://tempuri.org/GetShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackings">
+      <soap:operation soapAction="http://tempuri.org/SendTrackings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBillInfo">
+      <soap:operation soapAction="http://tempuri.org/SendBillInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOtherCharge">
+      <soap:operation soapAction="http://tempuri.org/SendOtherCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PublishAPIServiceSoap12" type="tns:PublishAPIServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDNInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDNInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrackingService">
+      <soap12:operation soapAction="http://tempuri.org/GetTrackingService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityForCRM">
+      <soap12:operation soapAction="http://tempuri.org/GetCityForCRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipment">
+      <soap12:operation soapAction="http://tempuri.org/GetShipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackings">
+      <soap12:operation soapAction="http://tempuri.org/SendTrackings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBillInfo">
+      <soap12:operation soapAction="http://tempuri.org/SendBillInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOtherCharge">
+      <soap12:operation soapAction="http://tempuri.org/SendOtherCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublishAPIService">
+    <wsdl:port name="PublishAPIServiceSoap" binding="tns:PublishAPIServiceSoap">
+      <soap:address location="http://lms.mindray.com/MindraytestService/PublishAPIService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PublishAPIServiceSoap12" binding="tns:PublishAPIServiceSoap12">
+      <soap12:address location="http://lms.mindray.com/MindraytestService/PublishAPIService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

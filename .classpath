@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/activation.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/alibaba-alp-sdk-1.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/alibaba-alp-sdk-1.0.0-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/axis.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/bs_fme_framework-client.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/dom4j.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/javaee.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/mail.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+	<classpathentry kind="lib" path="D:/001_Tools/Java_Tools/wsdl/saaj.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

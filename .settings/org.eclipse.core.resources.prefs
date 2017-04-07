@@ -1,0 +1,25 @@
+#Fri Oct 24 15:19:59 CST 2014
+eclipse.preferences.version=1
+encoding//src/client/WSContext.java=UTF-8
+encoding//src/com/kingdee/eas/henglu/WSInterface/DaHua/DaHua_Logistics_DataExchange.java=UTF-8
+encoding//src/com/kingdee/eas/henglu/WSInterface/DaHua/DaHua_Logistics_DataExchangeLocator.java=UTF-8
+encoding//src/com/kingdee/eas/henglu/WSInterface/DaHua/DaHua_Logistics_DataExchangeSoap.java=UTF-8
+encoding//src/com/kingdee/eas/henglu/WSInterface/DaHua/DaHua_Logistics_DataExchangeSoapStub.java=UTF-8
+encoding//src/com/wondersgroup/adage/webservice/interfaces/AdageBusinessWebService.java=UTF-8
+encoding//src/com/wondersgroup/adage/webservice/interfaces/AdageBusinessWebServiceHttpBindingStub.java=UTF-8
+encoding//src/com/wondersgroup/adage/webservice/interfaces/AdageBusinessWebServiceLocator.java=UTF-8
+encoding//src/com/wondersgroup/adage/webservice/interfaces/AdageBusinessWebServicePortType.java=UTF-8
+encoding//src/com/yann/Base64Test.java=UTF-8
+encoding//src/localhost/ormrpc/services/EASLogin/EASLoginProxy.java=UTF-8
+encoding//src/localhost/ormrpc/services/EASLogin/EASLoginProxyService.java=UTF-8
+encoding//src/localhost/ormrpc/services/EASLogin/EASLoginProxyServiceLocator.java=UTF-8
+encoding//src/localhost/ormrpc/services/EASLogin/EASLoginSoapBindingStub.java=UTF-8
+encoding//src/org/tempuri/CITY_CRM.java=UTF-8
+encoding//src/org/tempuri/EnResultBase.java=UTF-8
+encoding//src/org/tempuri/EnShipment.java=UTF-8
+encoding//src/org/tempuri/ListEnShipment.java=UTF-8
+encoding//src/org/tempuri/PublishAPIService.java=UTF-8
+encoding//src/org/tempuri/PublishAPIServiceLocator.java=UTF-8
+encoding//src/org/tempuri/PublishAPIServiceSoap.java=UTF-8
+encoding//src/org/tempuri/PublishAPIServiceSoapStub.java=UTF-8
+encoding//src/waybillstandardinterface/client/WSInvokeException.java=UTF-8

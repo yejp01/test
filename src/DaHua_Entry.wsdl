@@ -1,0 +1,289 @@
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://tempuri.org/">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+			<s:element name="HelloWorld">
+				<s:complexType />
+			</s:element>
+			<s:element name="HelloWorldResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DaHuaDataExchange">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="XmlInfo"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DaHuaDataExchangeResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="DaHuaDataExchangeResult" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetVisitorIP">
+				<s:complexType />
+			</s:element>
+			<s:element name="GetVisitorIPResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GetVisitorIPResult"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="string" nillable="true" type="s:string" />
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="HelloWorldSoapIn">
+		<wsdl:part name="parameters" element="tns:HelloWorld" />
+	</wsdl:message>
+	<wsdl:message name="HelloWorldSoapOut">
+		<wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeSoapIn">
+		<wsdl:part name="parameters" element="tns:DaHuaDataExchange" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeSoapOut">
+		<wsdl:part name="parameters" element="tns:DaHuaDataExchangeResponse" />
+	</wsdl:message>
+	<wsdl:message name="GetVisitorIPSoapIn">
+		<wsdl:part name="parameters" element="tns:GetVisitorIP" />
+	</wsdl:message>
+	<wsdl:message name="GetVisitorIPSoapOut">
+		<wsdl:part name="parameters" element="tns:GetVisitorIPResponse" />
+	</wsdl:message>
+	<wsdl:message name="HelloWorldHttpGetIn" />
+	<wsdl:message name="HelloWorldHttpGetOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeHttpGetIn">
+		<wsdl:part name="XmlInfo" type="s:string" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeHttpGetOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:message name="GetVisitorIPHttpGetIn" />
+	<wsdl:message name="GetVisitorIPHttpGetOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:message name="HelloWorldHttpPostIn" />
+	<wsdl:message name="HelloWorldHttpPostOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeHttpPostIn">
+		<wsdl:part name="XmlInfo" type="s:string" />
+	</wsdl:message>
+	<wsdl:message name="DaHuaDataExchangeHttpPostOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:message name="GetVisitorIPHttpPostIn" />
+	<wsdl:message name="GetVisitorIPHttpPostOut">
+		<wsdl:part name="Body" element="tns:string" />
+	</wsdl:message>
+	<wsdl:portType name="DaHua_Logistics_DataExchangeSoap">
+		<wsdl:operation name="HelloWorld">
+			<wsdl:input message="tns:HelloWorldSoapIn" />
+			<wsdl:output message="tns:HelloWorldSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<wsdl:input message="tns:DaHuaDataExchangeSoapIn" />
+			<wsdl:output message="tns:DaHuaDataExchangeSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<wsdl:input message="tns:GetVisitorIPSoapIn" />
+			<wsdl:output message="tns:GetVisitorIPSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="DaHua_Logistics_DataExchangeHttpGet">
+		<wsdl:operation name="HelloWorld">
+			<wsdl:input message="tns:HelloWorldHttpGetIn" />
+			<wsdl:output message="tns:HelloWorldHttpGetOut" />
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<wsdl:input message="tns:DaHuaDataExchangeHttpGetIn" />
+			<wsdl:output message="tns:DaHuaDataExchangeHttpGetOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<wsdl:input message="tns:GetVisitorIPHttpGetIn" />
+			<wsdl:output message="tns:GetVisitorIPHttpGetOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="DaHua_Logistics_DataExchangeHttpPost">
+		<wsdl:operation name="HelloWorld">
+			<wsdl:input message="tns:HelloWorldHttpPostIn" />
+			<wsdl:output message="tns:HelloWorldHttpPostOut" />
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<wsdl:input message="tns:DaHuaDataExchangeHttpPostIn" />
+			<wsdl:output message="tns:DaHuaDataExchangeHttpPostOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<wsdl:input message="tns:GetVisitorIPHttpPostIn" />
+			<wsdl:output message="tns:GetVisitorIPHttpPostOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DaHua_Logistics_DataExchangeSoap"
+		type="tns:DaHua_Logistics_DataExchangeSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="HelloWorld">
+			<soap:operation soapAction="http://tempuri.org/HelloWorld"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<soap:operation soapAction="http://tempuri.org/DaHuaDataExchange"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<soap:operation soapAction="http://tempuri.org/GetVisitorIP"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="DaHua_Logistics_DataExchangeSoap12"
+		type="tns:DaHua_Logistics_DataExchangeSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="HelloWorld">
+			<soap12:operation soapAction="http://tempuri.org/HelloWorld"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<soap12:operation soapAction="http://tempuri.org/DaHuaDataExchange"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<soap12:operation soapAction="http://tempuri.org/GetVisitorIP"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="DaHua_Logistics_DataExchangeHttpGet"
+		type="tns:DaHua_Logistics_DataExchangeHttpGet">
+		<http:binding verb="GET" />
+		<wsdl:operation name="HelloWorld">
+			<http:operation location="/HelloWorld" />
+			<wsdl:input>
+				<http:urlEncoded />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<http:operation location="/DaHuaDataExchange" />
+			<wsdl:input>
+				<http:urlEncoded />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<http:operation location="/GetVisitorIP" />
+			<wsdl:input>
+				<http:urlEncoded />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="DaHua_Logistics_DataExchangeHttpPost"
+		type="tns:DaHua_Logistics_DataExchangeHttpPost">
+		<http:binding verb="POST" />
+		<wsdl:operation name="HelloWorld">
+			<http:operation location="/HelloWorld" />
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DaHuaDataExchange">
+			<http:operation location="/DaHuaDataExchange" />
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVisitorIP">
+			<http:operation location="/GetVisitorIP" />
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DaHua_Logistics_DataExchange">
+		<wsdl:port name="DaHua_Logistics_DataExchangeSoap" binding="tns:DaHua_Logistics_DataExchangeSoap">
+			<soap:address
+				location="http://60.191.94.115/DH_DataExchangeTest/DaHua_Entry.asmx" />
+		</wsdl:port>
+		<wsdl:port name="DaHua_Logistics_DataExchangeSoap12"
+			binding="tns:DaHua_Logistics_DataExchangeSoap12">
+			<soap12:address
+				location="http://60.191.94.115/DH_DataExchangeTest/DaHua_Entry.asmx" />
+		</wsdl:port>
+		<wsdl:port name="DaHua_Logistics_DataExchangeHttpGet"
+			binding="tns:DaHua_Logistics_DataExchangeHttpGet">
+			<http:address
+				location="http://60.191.94.115/DH_DataExchangeTest/DaHua_Entry.asmx" />
+		</wsdl:port>
+		<wsdl:port name="DaHua_Logistics_DataExchangeHttpPost"
+			binding="tns:DaHua_Logistics_DataExchangeHttpPost">
+			<http:address
+				location="http://60.191.94.115/DH_DataExchangeTest/DaHua_Entry.asmx" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

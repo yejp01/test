@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<param>
+	<ServiceProviderGID>顺丰快递</ServiceProviderGID>
+	<Pwd>202cb962ac59075b964b07152d234b70</Pwd>
+	<ShipmentID>SP1406300001</ShipmentID>
+	<Status>30</Status>
+	<IsKeyStop>N</IsKeyStop>
+	<StopNum></StopNum>
+	<PlanStartDate></PlanStartDate>
+	<PlanEndDate></PlanEndDate>
+	<ActualStartDate></ActualStartDate>
+	<ActualEndDate></ActualEndDate>
+	<TrackingDate>2014-6-30 13:50</TrackingDate>
+	<City></City>
+	<Address>西安</Address>
+	<AWB></AWB>
+	<HWB></HWB>
+	<FlightNo></FlightNo>
+	<FlightDate></FlightDate>
+	<Remark></Remark>
+	<PODBy></PODBy>
+	<PODRemark></PODRemark>
+</param>

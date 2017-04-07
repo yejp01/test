@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://interfaces.webservice.adage.wondersgroup.com" xmlns:tns="http://interfaces.webservice.adage.wondersgroup.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://interfaces.webservice.adage.wondersgroup.com">
+<xsd:element name="dataQueryFeedback">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataQueryFeedbackResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataQuery">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataQueryResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataResponseQuery">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataResponseQueryResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataSend">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="dataSendResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="dataSendRequest">
+    <wsdl:part name="parameters" element="tns:dataSend">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataResponseQueryResponse">
+    <wsdl:part name="parameters" element="tns:dataResponseQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataSendResponse">
+    <wsdl:part name="parameters" element="tns:dataSendResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataQueryFeedbackResponse">
+    <wsdl:part name="parameters" element="tns:dataQueryFeedbackResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataQueryRequest">
+    <wsdl:part name="parameters" element="tns:dataQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataQueryResponse">
+    <wsdl:part name="parameters" element="tns:dataQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataResponseQueryRequest">
+    <wsdl:part name="parameters" element="tns:dataResponseQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dataQueryFeedbackRequest">
+    <wsdl:part name="parameters" element="tns:dataQueryFeedback">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AdageBusinessWebServicePortType">
+    <wsdl:operation name="dataQueryFeedback">
+      <wsdl:input name="dataQueryFeedbackRequest" message="tns:dataQueryFeedbackRequest">
+    </wsdl:input>
+      <wsdl:output name="dataQueryFeedbackResponse" message="tns:dataQueryFeedbackResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataQuery">
+      <wsdl:input name="dataQueryRequest" message="tns:dataQueryRequest">
+    </wsdl:input>
+      <wsdl:output name="dataQueryResponse" message="tns:dataQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataResponseQuery">
+      <wsdl:input name="dataResponseQueryRequest" message="tns:dataResponseQueryRequest">
+    </wsdl:input>
+      <wsdl:output name="dataResponseQueryResponse" message="tns:dataResponseQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataSend">
+      <wsdl:input name="dataSendRequest" message="tns:dataSendRequest">
+    </wsdl:input>
+      <wsdl:output name="dataSendResponse" message="tns:dataSendResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AdageBusinessWebServiceHttpBinding" type="tns:AdageBusinessWebServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="dataQueryFeedback">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="dataQueryFeedbackRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dataQueryFeedbackResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataQuery">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="dataQueryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dataQueryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataResponseQuery">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="dataResponseQueryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dataResponseQueryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dataSend">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="dataSendRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dataSendResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdageBusinessWebService">
+    <wsdl:port name="AdageBusinessWebServiceHttpPort" binding="tns:AdageBusinessWebServiceHttpBinding">
+      <wsdlsoap:address location="https://www.adj56pt.com/services/AdageBusinessWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

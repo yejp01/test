@@ -1,0 +1,2869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" xmlns:intf="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="urn:client.waybillstandardinterface" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="urn:client.waybillstandardinterface"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOfArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[][]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="urn:client.waybillstandardinterface" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="WSInvokeException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="updateAppDeliveryInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="checkModelNumberUniqeRequest">
+
+      <wsdl:part name="number" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="oprtType" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStampInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getIsWaitNoticeResponse">
+
+      <wsdl:part name="getIsWaitNoticeReturn" type="xsd:boolean">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMReceiveInfoResponse">
+
+      <wsdl:part name="saveCMReceiveInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMGoodsInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerInfoResponse">
+
+      <wsdl:part name="getCustomerInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSignatureInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMGoodsInfoResponse">
+
+      <wsdl:part name="saveCMGoodsInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="importDataRequest">
+
+      <wsdl:part name="xml" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveAppDeliveryInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMDeliveryInfoResponse">
+
+      <wsdl:part name="getCMDeliveryInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMDeliveryInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCityInfoResponse">
+
+      <wsdl:part name="getCityInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getReturnRequirInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteRecordWaybillResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getVehicleTypeInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMDeliveryInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getModelInfoResponse">
+
+      <wsdl:part name="getModelInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMGoodsInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAppDeliveryInfoResponse">
+
+      <wsdl:part name="getAppDeliveryInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMDeliveryInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setModelIsEnableResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMReceiveInfoRequest">
+
+      <wsdl:part name="filterParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSpecimensInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMGoodsInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectModelInfoRequest">
+
+      <wsdl:part name="customerID" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGoodsNameInfoResponse">
+
+      <wsdl:part name="getGoodsNameInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMCollectionInfoResponse">
+
+      <wsdl:part name="getCMCollectionInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSignatureInfoResponse">
+
+      <wsdl:part name="getSignatureInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMReceiveInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getGPSInfoResponse">
+
+      <wsdl:part name="getGPSInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOldPackTypeInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="loginRequest">
+
+      <wsdl:part name="userName" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="userPassword" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveModeInfoResponse">
+
+      <wsdl:part name="saveModeInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updatePasswordResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAppDeliveryInfoRequest">
+
+      <wsdl:part name="filterParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMGoodsInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getIsWaitNoticeRequest">
+
+      <wsdl:part name="customerID" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTranTypeInfoResponse">
+
+      <wsdl:part name="getTranTypeInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSpecimensInfoResponse">
+
+      <wsdl:part name="getSpecimensInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveAppDeliveryInfoResponse">
+
+      <wsdl:part name="saveAppDeliveryInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMCollectionInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setModelIsEnableRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMReceiveInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="importDataResponse">
+
+      <wsdl:part name="importDataReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRecordWaybillRequest">
+
+      <wsdl:part name="recordWaybillParm" type="impl:ArrayOfArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAppDeliveryResponse">
+
+      <wsdl:part name="getAppDeliveryReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMReceiveInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMGoodsInfoRequest">
+
+      <wsdl:part name="filterParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOldPackTypeInfoResponse">
+
+      <wsdl:part name="getOldPackTypeInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCityInfoRequest">
+
+      <wsdl:part name="provinceID" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStreetInfoResponse">
+
+      <wsdl:part name="getStreetInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAreaAddressInfoResponse">
+
+      <wsdl:part name="getAreaAddressInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMReceiveInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMDeliveryInfoResponse">
+
+      <wsdl:part name="saveCMDeliveryInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBizPersonInfoResponse">
+
+      <wsdl:part name="getBizPersonInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMReceiveInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMCollectionInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getReturnRequirInfoResponse">
+
+      <wsdl:part name="getReturnRequirInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectModelInfoResponse">
+
+      <wsdl:part name="selectModelInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAppDeliveryInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMReceiveInfoResponse">
+
+      <wsdl:part name="getCMReceiveInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStreetInfoRequest">
+
+      <wsdl:part name="areaAddressID" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerManagerInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecordWaybillResponse">
+
+      <wsdl:part name="getRecordWaybillReturn" type="impl:ArrayOfArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getModelInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getGPSInfoRequest">
+
+      <wsdl:part name="StruckNo" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMGoodsInfoResponse">
+
+      <wsdl:part name="getCMGoodsInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTranTypeInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAreaAddressInfoRequest">
+
+      <wsdl:part name="cityID" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMDeliveryInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStampInfoResponse">
+
+      <wsdl:part name="getStampInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecordWaybillRequest">
+
+      <wsdl:part name="filterParm" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProvinceInfoResponse">
+
+      <wsdl:part name="getProvinceInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveRecordWaybillResponse">
+
+      <wsdl:part name="saveRecordWaybillReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMDeliveryInfoRequest">
+
+      <wsdl:part name="filterParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTranTypeCusInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCMGoodsInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMDeliveryInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRecordWaybillResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteRecordWaybillRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveModeInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCustomerManagerInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getBizPersonInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAppDeliveryRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="checkModelNumberUniqeResponse">
+
+      <wsdl:part name="checkModelNumberUniqeReturn" type="xsd:boolean">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateCMCollectionInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProvinceInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="loginResponse">
+
+      <wsdl:part name="loginReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCustomerManagerInfoRequest">
+
+      <wsdl:part name="customerManParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMCollectionInfoResponse">
+
+      <wsdl:part name="saveCMCollectionInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getVehicleTypeInfoResponse">
+
+      <wsdl:part name="getVehicleTypeInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGoodsNameInfoRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMCollectionInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteCMCollectionInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveRecordWaybillRequest">
+
+      <wsdl:part name="recordWaybillParm" type="impl:ArrayOfArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAppDeliveryInfoRequest">
+
+      <wsdl:part name="filterParam" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCustomerManagerInfoResponse">
+
+      <wsdl:part name="getCustomerManagerInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTranTypeCusInfoResponse">
+
+      <wsdl:part name="getTranTypeCusInfoReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updatePasswordRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveCMCollectionInfoRequest">
+
+      <wsdl:part name="param" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvokeException">
+
+      <wsdl:part name="fault" type="tns1:WSInvokeException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAppDeliveryInfoResponse">
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSWayBillStandardInterfaceSrvProxy">
+
+      <wsdl:operation name="login" parameterOrder="userName userPassword">
+
+         <wsdl:input message="impl:loginRequest" name="loginRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loginResponse" name="loginResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="importData" parameterOrder="xml">
+
+         <wsdl:input message="impl:importDataRequest" name="importDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:importDataResponse" name="importDataResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMDeliveryInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveCMDeliveryInfoRequest" name="saveCMDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveCMDeliveryInfoResponse" name="saveCMDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAppDeliveryInfo" parameterOrder="filterParam">
+
+         <wsdl:input message="impl:deleteAppDeliveryInfoRequest" name="deleteAppDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteAppDeliveryInfoResponse" name="deleteAppDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMGoodsInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveCMGoodsInfoRequest" name="saveCMGoodsInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveCMGoodsInfoResponse" name="saveCMGoodsInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveAppDeliveryInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveAppDeliveryInfoRequest" name="saveAppDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveAppDeliveryInfoResponse" name="saveAppDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMGoodsInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:updateCMGoodsInfoRequest" name="updateCMGoodsInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateCMGoodsInfoResponse" name="updateCMGoodsInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMCollectionInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveCMCollectionInfoRequest" name="saveCMCollectionInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveCMCollectionInfoResponse" name="saveCMCollectionInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAppDelivery" parameterOrder="param">
+
+         <wsdl:input message="impl:getAppDeliveryRequest" name="getAppDeliveryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAppDeliveryResponse" name="getAppDeliveryResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAppDeliveryInfo" parameterOrder="filterParam">
+
+         <wsdl:input message="impl:getAppDeliveryInfoRequest" name="getAppDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAppDeliveryInfoResponse" name="getAppDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTranTypeInfo">
+
+         <wsdl:input message="impl:getTranTypeInfoRequest" name="getTranTypeInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTranTypeInfoResponse" name="getTranTypeInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMDeliveryInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:deleteCMDeliveryInfoRequest" name="deleteCMDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteCMDeliveryInfoResponse" name="deleteCMDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMCollectionInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:getCMCollectionInfoRequest" name="getCMCollectionInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCMCollectionInfoResponse" name="getCMCollectionInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMCollectionInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:deleteCMCollectionInfoRequest" name="deleteCMCollectionInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteCMCollectionInfoResponse" name="deleteCMCollectionInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMGoodsInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:getCMGoodsInfoRequest" name="getCMGoodsInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCMGoodsInfoResponse" name="getCMGoodsInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIsWaitNotice" parameterOrder="customerID">
+
+         <wsdl:input message="impl:getIsWaitNoticeRequest" name="getIsWaitNoticeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIsWaitNoticeResponse" name="getIsWaitNoticeResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAppDeliveryInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:updateAppDeliveryInfoRequest" name="updateAppDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateAppDeliveryInfoResponse" name="updateAppDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMDeliveryInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:updateCMDeliveryInfoRequest" name="updateCMDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateCMDeliveryInfoResponse" name="updateCMDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveRecordWaybill" parameterOrder="recordWaybillParm">
+
+         <wsdl:input message="impl:saveRecordWaybillRequest" name="saveRecordWaybillRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveRecordWaybillResponse" name="saveRecordWaybillResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getModelInfo">
+
+         <wsdl:input message="impl:getModelInfoRequest" name="getModelInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getModelInfoResponse" name="getModelInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveModeInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveModeInfoRequest" name="saveModeInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveModeInfoResponse" name="saveModeInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMReceiveInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:getCMReceiveInfoRequest" name="getCMReceiveInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCMReceiveInfoResponse" name="getCMReceiveInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAreaAddressInfo" parameterOrder="cityID">
+
+         <wsdl:input message="impl:getAreaAddressInfoRequest" name="getAreaAddressInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAreaAddressInfoResponse" name="getAreaAddressInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSpecimensInfo">
+
+         <wsdl:input message="impl:getSpecimensInfoRequest" name="getSpecimensInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSpecimensInfoResponse" name="getSpecimensInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerInfo">
+
+         <wsdl:input message="impl:getCustomerInfoRequest" name="getCustomerInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCustomerInfoResponse" name="getCustomerInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setModelIsEnable" parameterOrder="param">
+
+         <wsdl:input message="impl:setModelIsEnableRequest" name="setModelIsEnableRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setModelIsEnableResponse" name="setModelIsEnableResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRecordWaybill" parameterOrder="recordWaybillParm">
+
+         <wsdl:input message="impl:updateRecordWaybillRequest" name="updateRecordWaybillRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateRecordWaybillResponse" name="updateRecordWaybillResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectModelInfo" parameterOrder="customerID">
+
+         <wsdl:input message="impl:selectModelInfoRequest" name="selectModelInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:selectModelInfoResponse" name="selectModelInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMCollectionInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:updateCMCollectionInfoRequest" name="updateCMCollectionInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateCMCollectionInfoResponse" name="updateCMCollectionInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGoodsNameInfo">
+
+         <wsdl:input message="impl:getGoodsNameInfoRequest" name="getGoodsNameInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGoodsNameInfoResponse" name="getGoodsNameInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCustomerManagerInfo" parameterOrder="customerManParam">
+
+         <wsdl:input message="impl:setCustomerManagerInfoRequest" name="setCustomerManagerInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCustomerManagerInfoResponse" name="setCustomerManagerInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMDeliveryInfo" parameterOrder="filterParam">
+
+         <wsdl:input message="impl:getCMDeliveryInfoRequest" name="getCMDeliveryInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCMDeliveryInfoResponse" name="getCMDeliveryInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGPSInfo" parameterOrder="StruckNo">
+
+         <wsdl:input message="impl:getGPSInfoRequest" name="getGPSInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGPSInfoResponse" name="getGPSInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStreetInfo" parameterOrder="areaAddressID">
+
+         <wsdl:input message="impl:getStreetInfoRequest" name="getStreetInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStreetInfoResponse" name="getStreetInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBizPersonInfo">
+
+         <wsdl:input message="impl:getBizPersonInfoRequest" name="getBizPersonInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getBizPersonInfoResponse" name="getBizPersonInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOldPackTypeInfo">
+
+         <wsdl:input message="impl:getOldPackTypeInfoRequest" name="getOldPackTypeInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getOldPackTypeInfoResponse" name="getOldPackTypeInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProvinceInfo">
+
+         <wsdl:input message="impl:getProvinceInfoRequest" name="getProvinceInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getProvinceInfoResponse" name="getProvinceInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSignatureInfo">
+
+         <wsdl:input message="impl:getSignatureInfoRequest" name="getSignatureInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSignatureInfoResponse" name="getSignatureInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReturnRequirInfo">
+
+         <wsdl:input message="impl:getReturnRequirInfoRequest" name="getReturnRequirInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getReturnRequirInfoResponse" name="getReturnRequirInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updatePassword" parameterOrder="param">
+
+         <wsdl:input message="impl:updatePasswordRequest" name="updatePasswordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updatePasswordResponse" name="updatePasswordResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getVehicleTypeInfo">
+
+         <wsdl:input message="impl:getVehicleTypeInfoRequest" name="getVehicleTypeInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getVehicleTypeInfoResponse" name="getVehicleTypeInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStampInfo">
+
+         <wsdl:input message="impl:getStampInfoRequest" name="getStampInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStampInfoResponse" name="getStampInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMReceiveInfo" parameterOrder="filterParam">
+
+         <wsdl:input message="impl:deleteCMReceiveInfoRequest" name="deleteCMReceiveInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteCMReceiveInfoResponse" name="deleteCMReceiveInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerManagerInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:getCustomerManagerInfoRequest" name="getCustomerManagerInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCustomerManagerInfoResponse" name="getCustomerManagerInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTranTypeCusInfo">
+
+         <wsdl:input message="impl:getTranTypeCusInfoRequest" name="getTranTypeCusInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTranTypeCusInfoResponse" name="getTranTypeCusInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMReceiveInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:updateCMReceiveInfoRequest" name="updateCMReceiveInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateCMReceiveInfoResponse" name="updateCMReceiveInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="checkModelNumberUniqe" parameterOrder="number oprtType">
+
+         <wsdl:input message="impl:checkModelNumberUniqeRequest" name="checkModelNumberUniqeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:checkModelNumberUniqeResponse" name="checkModelNumberUniqeResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMGoodsInfo" parameterOrder="filterParam">
+
+         <wsdl:input message="impl:deleteCMGoodsInfoRequest" name="deleteCMGoodsInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteCMGoodsInfoResponse" name="deleteCMGoodsInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecordWaybill" parameterOrder="filterParm">
+
+         <wsdl:input message="impl:getRecordWaybillRequest" name="getRecordWaybillRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRecordWaybillResponse" name="getRecordWaybillResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCityInfo" parameterOrder="provinceID">
+
+         <wsdl:input message="impl:getCityInfoRequest" name="getCityInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCityInfoResponse" name="getCityInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMReceiveInfo" parameterOrder="param">
+
+         <wsdl:input message="impl:saveCMReceiveInfoRequest" name="saveCMReceiveInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveCMReceiveInfoResponse" name="saveCMReceiveInfoResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteRecordWaybill" parameterOrder="param">
+
+         <wsdl:input message="impl:deleteRecordWaybillRequest" name="deleteRecordWaybillRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteRecordWaybillResponse" name="deleteRecordWaybillResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:WSInvokeException" name="WSInvokeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSWayBillStandardInterfaceSoapBinding" type="impl:WSWayBillStandardInterfaceSrvProxy">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="login">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loginRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loginResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="importData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="importDataRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="importDataResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveCMDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveCMDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAppDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteAppDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteAppDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMGoodsInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveCMGoodsInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveCMGoodsInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveAppDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveAppDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveAppDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMGoodsInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateCMGoodsInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateCMGoodsInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMCollectionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveCMCollectionInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveCMCollectionInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAppDelivery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAppDeliveryRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAppDeliveryResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAppDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAppDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAppDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTranTypeInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTranTypeInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTranTypeInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteCMDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteCMDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMCollectionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCMCollectionInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCMCollectionInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMCollectionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteCMCollectionInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteCMCollectionInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMGoodsInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCMGoodsInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCMGoodsInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIsWaitNotice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIsWaitNoticeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIsWaitNoticeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAppDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateAppDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateAppDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateCMDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateCMDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveRecordWaybill">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveRecordWaybillRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveRecordWaybillResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getModelInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getModelInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getModelInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveModeInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveModeInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveModeInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMReceiveInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCMReceiveInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCMReceiveInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAreaAddressInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAreaAddressInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAreaAddressInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSpecimensInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSpecimensInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSpecimensInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCustomerInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCustomerInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setModelIsEnable">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setModelIsEnableRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setModelIsEnableResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRecordWaybill">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateRecordWaybillRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateRecordWaybillResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectModelInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="selectModelInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="selectModelInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMCollectionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateCMCollectionInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateCMCollectionInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGoodsNameInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGoodsNameInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGoodsNameInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCustomerManagerInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCustomerManagerInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCustomerManagerInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCMDeliveryInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCMDeliveryInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCMDeliveryInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGPSInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGPSInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGPSInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStreetInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStreetInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStreetInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBizPersonInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBizPersonInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBizPersonInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOldPackTypeInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOldPackTypeInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOldPackTypeInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProvinceInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProvinceInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProvinceInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSignatureInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSignatureInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSignatureInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReturnRequirInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getReturnRequirInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getReturnRequirInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updatePassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updatePasswordRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updatePasswordResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getVehicleTypeInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getVehicleTypeInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getVehicleTypeInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStampInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStampInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStampInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMReceiveInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteCMReceiveInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteCMReceiveInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCustomerManagerInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCustomerManagerInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCustomerManagerInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTranTypeCusInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTranTypeCusInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTranTypeCusInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCMReceiveInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateCMReceiveInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateCMReceiveInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="checkModelNumberUniqe">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="checkModelNumberUniqeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="checkModelNumberUniqeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteCMGoodsInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteCMGoodsInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteCMGoodsInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecordWaybill">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRecordWaybillRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRecordWaybillResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCityInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCityInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCityInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveCMReceiveInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveCMReceiveInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveCMReceiveInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteRecordWaybill">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteRecordWaybillRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.app.WebServiceInterface.eas.kingdee.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteRecordWaybillResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSInvokeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="WSInvokeException" namespace="http://192.168.3.138:56898/ormrpc/services/WSWayBillStandardInterface" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSWayBillStandardInterfaceSrvProxyService">
+
+      <wsdl:port binding="impl:WSWayBillStandardInterfaceSoapBinding" name="WSWayBillStandardInterface">
+
+         <wsdlsoap:address location="http://localhost:56898/ormrpc/services/WSWayBillStandardInterface"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

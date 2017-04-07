@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<WayBillInfo>
+			<customer>客户端口号</customer>
+			<customerTranNo>客户发货单号</customerTranNo>
+			<customerOrderNo>客户定单号</customerOrderNo>
+			<!-- 发货人信息 -->
+			<deliveryName>发货人</deliveryName>
+			<deliveryCompany>发货人公司</deliveryCompany>
+			<deliveryPhone>发货人手机</deliveryPhone>
+			<deliveryTel>发货人联系方式</deliveryTel>
+			<deliveryProvince>发货人省份</deliveryProvince>
+			<deliveryCity>发货人市</deliveryCity>
+			<deliveryArea>发货人区</deliveryArea>
+			<deliveryAddress>发货人详细地址</deliveryAddress>
+			<!-- 收货人信息 -->
+			<receiverName>收货人</receiverName>
+			<receiverCompany>收货人公司</receiverCompany>
+			<receiverPhone>收货人电话</receiverPhone>
+			<receiverTel>收货人联系方式</receiverTel>
+			<receiverProvince>收货人省</receiverProvince>
+			<receiverCity>收货人市</receiverCity>
+			<receiverArea>收货人区</receiverArea>
+			<receiverAddress>收货人详细地址</receiverAddress>
+			<!-- —货物信息 -->
+			<goodsName>货物品名</goodsName>
+			<oldNumber>原始件数</oldNumber>
+			<actualWeight>实际重量</actualWeight>
+			<volume>体积</volume>
+			<oldPackType>原始包装方式</oldPackType>
+			<!-- 增值业务信息 -->
+			<transportType>计划运输方式</transportType>
+			<serviceType>服务方式</serviceType>
+			<payWay>付款方式</payWay>
+		<toPayFee>到付运费</toPayFee>
+			<payMoneyDate>付款日期</payMoneyDate>
+			<cashAmount>现金金额</cashAmount>
+			<cashReceiver>现金收款人</cashReceiver>
+			<cashPayer>现金付款人</cashPayer>
+			<isCollection>是否代收货款</isCollection>
+			<collectionMoney>代收货款金额</collectionMoney>
+			<collectionServerType>代收货款服务类型</collectionServerType>
+			<limitationDay>客户要求时效（天）</limitationDay>
+			<limitationHour>客户要求时效（时）</limitationHour>
+			<sendMoney>派送费付款方</sendMoney>
+			<isWaitNotice>是否等通知放货</isWaitNotice>
+			<signatures>
+				<signature>签字</signature>
+				<signature>盖章</signature>
+			</signatures>
+			<stamps>
+				<stamp>盖章</stamp>
+				<stamp>指定章</stamp>
+			</stamps>
+			<specimens>
+				<specimen>身份证号</specimen>
+				<specimen>军工号</specimen>
+			</specimens>
+			<returnRequirement>返单要求</returnRequirement>
+			<isSentStr>是否直送</isSentStr>
+			<remark>是否直送</remark>
+			<!-- 提货接口信息 -->
+			<thTime>要求提货时间</thTime>
+			<otherRequire>其他要求</otherRequire>
+			<appDeliveryRemark>备注</appDeliveryRemark>
+		</WayBillInfo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+	<order>
+		<is_success>T</is_success>
+		<error></error>
+	</order>
+	<order>
+		<is_success>F</is_success>
+		<error>错误消息内容</error>
+	</order>
+</orders>

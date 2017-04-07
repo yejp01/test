@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppDeliveryInfo>
+	<portNo>客户端口号</portNo>
+	<!-- 发货人信息 -->
+	<deliveryName>发货人</deliveryName>
+	<deliveryTel>发货人联系方式</deliveryTel>
+	<deliveryProvince>发货人省份</deliveryProvince>
+	<deliveryCity>发货人市</deliveryCity>
+	<deliveryArea>发货人区</deliveryArea>
+	<deliveryAddress>发货人详细地址</deliveryAddress>
+	<!-- 货物信息 -->
+	<oldNumber>原始件数</oldNumber>
+	<actualWeight>实际重量</actualWeight>
+	<volume>体积</volume>
+	<!-- 其他要求 -->
+	<thTime>要求提货时间</thTime>
+	<otherRequire>其他要求</otherRequire>
+	<appDeliveryRemark>备注</appDeliveryRemark>
+</AppDeliveryInfo>

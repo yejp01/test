@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+	<portNo>FSK</portNo>
+	<!-- 发货人信息 -->
+	<actualWeight>1685</actualWeight>
+	<volume>56.23</volume>
+	<oldNumber>23</oldNumber>
+	<serviceType>5</serviceType>
+	<isInsurance>1</isInsurance>
+	<insuranceAmount>100000</insuranceAmount>
+	<customerTransportTypeInfo>公路快件</customerTransportTypeInfo>
+	<deliveryProvince>广东省</deliveryProvince>
+	<deliveryCity>深圳市</deliveryCity>
+	<receiverProvince>上海</receiverProvince>
+	<receiverCity>上海市</receiverCity>
+	<receiverArea>浦东区</receiverArea>
+</Request>
